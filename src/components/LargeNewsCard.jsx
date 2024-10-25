@@ -43,23 +43,23 @@ const LargeNewsCard = ({ article, onToggleLike }) => {
       {/* Text Content Side by Side */}
       <div className="w-2/3 pl-4 flex flex-col justify-between">
         <div>
-          <h2 className="text-xl font-bold">
+          <h2 className="text-2xl font-bold">
             {(title === '[Removed]' || !title) ? 'No title available' : title}
           </h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-base text-gray-600">
             {(description === '[Removed]' || !description) ? 'No description available' : description}
           </p>
-          <a href={url || '#'} target="_blank" rel="noopener noreferrer" className="text-red-600 text-sm underline">
+          <a href={url || '#'} target="_blank" rel="noopener noreferrer" className="text-red-600 text-base underline">
             Read More
           </a>
-          <div className="text-xs text-gray-400">
+          <div className="text-sm text-gray-400">
             {(!source || source.name === '[Removed]') ? 'Unknown Source' : source.name} • {publishedAt ? moment(publishedAt).fromNow() : 'No date available'}
           </div>
 
           {/* Like and Share Buttons */}
           <div className="flex items-center justify-start mt-1 ml-1 space-x-4">
             {/* Heart Button: Changes color based on `liked` state */}
-            <button onClick={handleLikeClick} className="flex items-center text-xl">
+            <button onClick={handleLikeClick} className="flex items-center text-2xl">
               {liked ? <GoHeartFill className="text-red-600" /> : <GoHeart className="text-gray-600" />}
             </button>
 

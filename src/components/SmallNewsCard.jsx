@@ -33,26 +33,26 @@ const SmallNewsCard = ({ article, onToggleLike }) => {
         className="object-cover w-full h-56"
       />
       <div className="px-4 py-2">
-        <h2 className="text-base font-semibold">
+        <h2 className="text-lg font-semibold">
           {(title === '[Removed]' || !title) ? 'No title available' : title}
         </h2>
-        <p className="text-sm text-gray-600">
+        <p className="text-base text-gray-600">
           {(description === '[Removed]' || !description) ? 'No description available' : description}
         </p>
-        <a href={url || '#'} target="_blank" rel="noopener noreferrer" className="text-red-600 text-xs underline block">
+        <a href={url || '#'} target="_blank" rel="noopener noreferrer" className="text-red-600 text-sm underline block">
           Read More
         </a>
-        <span className="text-xs text-gray-400">
+        <span className="text-sm text-gray-400">
           {(!source || source.name === '[Removed]') ? 'Unknown Source' : source.name} • {publishedAt ? moment(publishedAt).fromNow() : 'No date available'}
         </span>
 
         {/* Like and Share Buttons */}
         <div className="flex items-center justify-start mt-1 ml-1 space-x-4">
           {/* Heart Button: Changes color based on `liked` state */}
-          <button onClick={handleLikeClick} className="flex items-center text-xl">
+          <button onClick={handleLikeClick} className="flex items-center text-2xl">
             {liked ? <GoHeartFill className="text-red-600" /> : <GoHeart className="text-gray-600" />}
           </button>
-          <button onClick={handleShare} className="flex items-center text-gray-600">
+          <button onClick={handleShare} className="flex items-center text-xl text-gray-600">
             <FaShareAlt />
           </button>
         </div>
