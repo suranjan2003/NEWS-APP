@@ -17,7 +17,7 @@
 /* For smaller devices */
 @media (max-width: 767px) {
   .news-feed {
-    height: calc(100vh - 105px); /* Adjust for smaller devices */
+    height: calc(100vh - 70px); /* Adjust for smaller devices */
   }
 }
 
