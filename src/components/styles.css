@@ -1,0 +1,36 @@
+/*style.css*/
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* For larger devices */
+@media (min-width: 768px) {
+  .news-feed {
+    height: calc(100vh - 70px +0px); /* Adjust for larger devices */
+  }
+}
+
+/* For smaller devices */
+@media (max-width: 767px) {
+  .news-feed {
+    height: calc(100vh - 70px); /* Adjust for smaller devices */
+  }
+}
+
+.news-card {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.small-card {
+  background-color: white;
+  height: 700px; /* For smaller devices */
+}
+
+.large-card {
+  width: 70%; /* Adjust width for larger screens */
+}
