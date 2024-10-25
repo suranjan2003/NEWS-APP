@@ -20,7 +20,7 @@ const NewsFeed = () => {
         const data = await response.json();
 
         // Add a 'liked' field to each article with a default value of 0 (not liked)
-        const articlesWithLikeStatus = data.articles.map(article => ({
+        const articlesWithLikeStatus = data?.articles.map(article => ({
           ...article,
           liked: 0 // Default value is 0 (not liked)
         }));
