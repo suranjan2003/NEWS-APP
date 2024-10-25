@@ -10,6 +10,65 @@ const NewsFeed = () => {
 
   const apiKey = '0531fa2cea8743179afc526d48322bf3'; // Update this with your actual API key.
 
+  const data = 
+     [
+      {
+        "author": "Tracy Swartz",
+        "content": "Type 2 diabetics may have a shot at significantly lowering their risk of Alzheimer’s disease if they take Ozempic instead.",
+        "description": "Nearly 7 million Americans 65 and older are living with Alzheimer’s disease, which gradually destroys memory and thinking skills.",
+        "publishedAt": "2024-10-24T11:00:00Z",
+        "source": {
+          "id": null,
+          "name": "New York Post"
+        },
+        "title": "1 Ozempic may significantly lower the risk of Alzheimer’s disease — here’s how - New York Post",
+        "url": "https://nypost.com/2024/10/24/lifestyle/ozempic-may-lower-the-risk-of-alzheimers-disease-new-study/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/10/92232000.jpg"
+      },
+      {
+        "author": "Tracy Swartz",
+        "content": "Type 2 diabetics may have a shot at significantly lowering their risk of Alzheimer’s disease if they take Ozempic instead.",
+        "description": "Nearly 7 million Americans 65 and older are living with Alzheimer’s disease, which gradually destroys memory and thinking skills.",
+        "publishedAt": "2024-10-24T11:00:00Z",
+        "source": {
+          "id": null,
+          "name": "New York Post"
+        },
+        "title": "2 Ozempic may significantly lower the risk of Alzheimer’s disease — here’s how - New York Post",
+        "url": "https://nypost.com/2024/10/24/lifestyle/ozempic-may-lower-the-risk-of-alzheimers-disease-new-study/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/10/92232000.jpg"
+      },
+      {
+        "author": "Tracy Swartz",
+        "content": "Type 2 diabetics may have a shot at significantly lowering their risk of Alzheimer’s disease if they take Ozempic instead.",
+        "description": "Nearly 7 million Americans 65 and older are living with Alzheimer’s disease, which gradually destroys memory and thinking skills.",
+        "publishedAt": "2024-10-24T11:00:00Z",
+        "source": {
+          "id": null,
+          "name": "New York Post"
+        },
+        "title": "3 Ozempic may significantly lower the risk of Alzheimer’s disease — here’s how - New York Post",
+        "url": "https://nypost.com/2024/10/24/lifestyle/ozempic-may-lower-the-risk-of-alzheimers-disease-new-study/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/10/92232000.jpg"
+      },
+      {
+        "author": "Tracy Swartz",
+        "content": "Type 2 diabetics may have a shot at significantly lowering their risk of Alzheimer’s disease if they take Ozempic instead.",
+        "description": "Nearly 7 million Americans 65 and older are living with Alzheimer’s disease, which gradually destroys memory and thinking skills.",
+        "publishedAt": "2024-10-24T11:00:00Z",
+        "source": {
+          "id": null,
+          "name": "New York Post"
+        },
+        "title": "4 Ozempic may significantly lower the risk of Alzheimer’s disease — here’s how - New York Post",
+        "url": "https://nypost.com/2024/10/24/lifestyle/ozempic-may-lower-the-risk-of-alzheimers-disease-new-study/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/10/92232000.jpg"
+      },
+    ]
+
+  
+
+
   // Fetch articles on load
   useEffect(() => {
     const fetchNews = async () => {
@@ -17,11 +76,11 @@ const NewsFeed = () => {
         const response = await fetch(
           `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
         );
-        const data = await response.json();
+        // const data = await response.json();
         console.log(data);
         console.log('newsfeed');
         // Add a 'liked' field to each article with a default value of 0 (not liked)
-        const articlesWithLikeStatus = data?.articles.map(article => ({
+        const articlesWithLikeStatus = data?.map(article => ({
           ...article,
           liked: 0 // Default value is 0 (not liked)
         }));
