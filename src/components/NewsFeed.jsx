@@ -18,7 +18,8 @@ const NewsFeed = () => {
           `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
         );
         const data = await response.json();
-
+        console.log(data);
+        console.log('newsfeed');
         // Add a 'liked' field to each article with a default value of 0 (not liked)
         const articlesWithLikeStatus = data?.articles.map(article => ({
           ...article,
